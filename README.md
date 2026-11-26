@@ -28,4 +28,19 @@ python -m pytest -q
 
 The 60 synthetic evaluation tickets have 12 examples per label, including multi-issue and out-of-scope tickets. The prompt examples are separate. Reported macro F1 weights each of the five labels equally. The review rate measures how much work is deferred. Median latency measures each warmed routing call, and direct API fees are USD 0 for both local routers. Electricity and machine time are outside that estimate.
 
+### Results on 60 held-out tickets
+
+| Router | Macro F1 | Routed to manual review | Median latency | Estimated API cost per ticket |
+| --- | ---: | ---: | ---: | ---: |
+| Keyword baseline | 0.525 | 40/60 (66.7%) | 0.010 ms | USD 0 |
+| Qwen2.5 0.5B via Ollama | 0.570 | 12/60 (20.0%) | 424.7 ms | USD 0 |
+
+The LLM recognized several returns phrased without keywords, such as “The headphones are too tight. Could I send them back?” The lower review rate came with a tradeoff. It correctly deferred just **2 of 12** tickets labelled for manual review. It sent a sponsorship request to billing, sent a delivery reroute to returns, and deferred an expired password reset. The keyword router correctly deferred 11 of the 12 review-labelled cases, while also deferring many tickets that had clear categories.
+
+For the next iteration, I would test an explicit check for unrelated requests and strengthen the examples that distinguish delivery rerouting from product returns. I would measure review recall and per-category F1 on a fresh test set. This run used a small, balanced synthetic dataset on a GitHub-hosted CPU runner, so the scores and latency describe this benchmark.
+
+[Per-ticket predictions and confusion matrices](data/benchmark.json) · [GitHub Actions benchmark run](https://github.com/JoshuaJo1298/support-ticket-triage/actions/runs/45905672464)
+
+### Engineering tradeoff
+
 SQLite and a local model keep the demo easy to run. Having a reviewer assign the final route adds a step but preserves a correction trail and gives the model a way to defer ambiguous cases.
