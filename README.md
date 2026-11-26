@@ -15,6 +15,8 @@ uvicorn app:app --port 8001
 
 Open http://localhost:8001 and submit a synthetic ticket such as “The tracking link says delivered but my porch is empty.” Choose the final category and click **Save decision**. To demonstrate an override, pick a different category and see both decisions retained. An unavailable model, timeout, or invalid response routes the ticket to manual review. The default queue uses a local SQLite file. Set `TICKET_DB` to use a separate demo file.
 
+![A reviewer assigns Shipping after an unavailable model sends the ticket to manual review.](queue-demo.png)
+
 ## Evaluation
 
 ```sh
