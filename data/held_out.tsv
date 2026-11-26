@@ -1,0 +1,60 @@
+billing	I see two debits for one order on my bank statement.
+billing	My card was charged after I cancelled at checkout.
+billing	The total on my statement is eight dollars above the order total.
+billing	Can you change the company name on the invoice?
+billing	The checkout says declined but money has left my bank.
+billing	Where can I download proof of purchase for accounting?
+billing	Why was I billed in US dollars?
+billing	A discount was visible in the basket but disappeared when I paid.
+billing	My gift voucher was debited and the order did not complete.
+billing	The receipt has the wrong tax amount.
+billing	Could you split the payment between my two cards?
+billing	My monthly statement lists a purchase I do not recognise.
+shipping	The courier left my parcel at number 26 instead of number 62.
+shipping	My package hasn't moved since the label was created.
+shipping	The order is due Monday and nobody will be home. Can I collect it?
+shipping	I ordered to my office. Please send the box to my house instead.
+shipping	The tracking link says delivered, but my porch is empty.
+shipping	Only one of the two boxes arrived this morning.
+shipping	The driver couldn't find the intercom. Can you arrange another attempt?
+shipping	Has my order left the warehouse yet?
+shipping	Can I get a narrower window for today's delivery?
+shipping	The package made it to Perth then somehow went back to Sydney.
+shipping	I have a shipment number but it takes me to a blank page.
+shipping	Can the courier hold my order until I arrive on Friday?
+returns	The headphones are too tight. Could I send them back?
+returns	The jacket arrived with a hole in the sleeve and I'd like another one.
+returns	These sneakers are a size too small and I would like an exchange.
+returns	I changed my mind after opening the box. How do I send it back?
+returns	Where can I print the prepaid label for sending my blender back?
+returns	The blue mug was cracked when I opened it. Can you replace it?
+returns	I ordered two cushions and want to keep only one.
+returns	I sent my kettle back last week and have yet to receive my refund.
+returns	The item was sold as new but looks used. Can I swap it?
+returns	Is an in-store return possible for an online purchase?
+returns	I bought the wrong cable and would like to swap it for the correct connector.
+returns	My gift recipient wants to exchange these gloves and has the packaging.
+account_access	The sign in page loops back after I enter my credentials.
+account_access	My login worked yesterday but now it says the account is locked.
+account_access	I no longer have the phone that receives my sign-in code.
+account_access	The password reset link says it has already expired.
+account_access	The site rejects my usual credentials even though they work in the app.
+account_access	Can you help me get back into my profile after changing email providers?
+account_access	The verification email keeps going to my old inbox.
+account_access	I tried too many times and now I cannot log in.
+account_access	My account uses an old mobile number, so I cannot complete two-factor authentication.
+account_access	Can I sign in without the authentication app on my old tablet?
+account_access	Apple sign-in created a new profile and I can't open my previous one.
+account_access	The page says my email is already registered but never sends a recovery message.
+manual_review	Do you offer wholesale pricing for cafes?
+manual_review	Can your marketing team sponsor our school fundraiser?
+manual_review	Does this lamp come in bright orange?
+manual_review	Can I book a showroom visit on Sunday?
+manual_review	I would like to report a typo in the product description.
+manual_review	I need help with something about my order but cannot explain it here.
+manual_review	The courier missed my house and I also need you to fix an unrelated charge.
+manual_review	I need an invoice for the desk and an exchange for a separate chair. Both are urgent.
+manual_review	I'm locked out and my package went missing. Please handle both issues today.
+manual_review	I'd like to exchange my boots and investigate an unrelated duplicate payment.
+manual_review	Please pass this compliment on to your staff.
+manual_review	Everything has gone wrong. Is there a person I can speak with?

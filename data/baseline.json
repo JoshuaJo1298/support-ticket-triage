@@ -1,0 +1,536 @@
+{
+  "cases": 60,
+  "keyword": {
+    "macro_f1": 0.5246153846153846,
+    "per_category_f1": {
+      "billing": 0.5,
+      "shipping": 0.5,
+      "returns": 0.5,
+      "account_access": 0.7,
+      "manual_review": 0.4230769230769231
+    },
+    "manual_review_rate": 0.6666666666666666,
+    "median_latency_ms": 0.016771000000082026,
+    "estimated_api_cost_usd_per_ticket": 0.0,
+    "model_errors": 0,
+    "confusion_matrix": {
+      "billing": {
+        "billing": 4,
+        "shipping": 0,
+        "returns": 0,
+        "account_access": 0,
+        "manual_review": 8
+      },
+      "shipping": {
+        "billing": 0,
+        "shipping": 4,
+        "returns": 0,
+        "account_access": 0,
+        "manual_review": 8
+      },
+      "returns": {
+        "billing": 0,
+        "shipping": 0,
+        "returns": 4,
+        "account_access": 0,
+        "manual_review": 8
+      },
+      "account_access": {
+        "billing": 0,
+        "shipping": 0,
+        "returns": 0,
+        "account_access": 7,
+        "manual_review": 5
+      },
+      "manual_review": {
+        "billing": 0,
+        "shipping": 0,
+        "returns": 0,
+        "account_access": 1,
+        "manual_review": 11
+      }
+    },
+    "predictions": [
+      {
+        "ticket": "I see two debits for one order on my bank statement.",
+        "expected": "billing",
+        "category": "manual_review",
+        "latency_ms": 0.4059590000000668,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "My card was charged after I cancelled at checkout.",
+        "expected": "billing",
+        "category": "billing",
+        "latency_ms": 0.020542000000123295,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The total on my statement is eight dollars above the order total.",
+        "expected": "billing",
+        "category": "manual_review",
+        "latency_ms": 0.018708999999894615,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Can you change the company name on the invoice?",
+        "expected": "billing",
+        "category": "billing",
+        "latency_ms": 0.0157500000002031,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The checkout says declined but money has left my bank.",
+        "expected": "billing",
+        "category": "manual_review",
+        "latency_ms": 0.016041000000299732,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Where can I download proof of purchase for accounting?",
+        "expected": "billing",
+        "category": "manual_review",
+        "latency_ms": 0.0151669999999271,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Why was I billed in US dollars?",
+        "expected": "billing",
+        "category": "manual_review",
+        "latency_ms": 0.013374999999982151,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "A discount was visible in the basket but disappeared when I paid.",
+        "expected": "billing",
+        "category": "manual_review",
+        "latency_ms": 0.016833000000104903,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "My gift voucher was debited and the order did not complete.",
+        "expected": "billing",
+        "category": "manual_review",
+        "latency_ms": 0.01645900000024625,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The receipt has the wrong tax amount.",
+        "expected": "billing",
+        "category": "billing",
+        "latency_ms": 0.013749999999923546,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Could you split the payment between my two cards?",
+        "expected": "billing",
+        "category": "billing",
+        "latency_ms": 0.015584000000234965,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "My monthly statement lists a purchase I do not recognise.",
+        "expected": "billing",
+        "category": "manual_review",
+        "latency_ms": 0.015584000000234965,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The courier left my parcel at number 26 instead of number 62.",
+        "expected": "shipping",
+        "category": "shipping",
+        "latency_ms": 0.017582999999987692,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "My package hasn't moved since the label was created.",
+        "expected": "shipping",
+        "category": "manual_review",
+        "latency_ms": 0.015499999999946112,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The order is due Monday and nobody will be home. Can I collect it?",
+        "expected": "shipping",
+        "category": "manual_review",
+        "latency_ms": 0.018459000000081716,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "I ordered to my office. Please send the box to my house instead.",
+        "expected": "shipping",
+        "category": "manual_review",
+        "latency_ms": 0.01724999999996868,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The tracking link says delivered, but my porch is empty.",
+        "expected": "shipping",
+        "category": "shipping",
+        "latency_ms": 0.015791999999681394,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Only one of the two boxes arrived this morning.",
+        "expected": "shipping",
+        "category": "manual_review",
+        "latency_ms": 0.014957999999953842,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The driver couldn't find the intercom. Can you arrange another attempt?",
+        "expected": "shipping",
+        "category": "manual_review",
+        "latency_ms": 0.017166999999762567,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Has my order left the warehouse yet?",
+        "expected": "shipping",
+        "category": "manual_review",
+        "latency_ms": 0.013209000000014015,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Can I get a narrower window for today's delivery?",
+        "expected": "shipping",
+        "category": "shipping",
+        "latency_ms": 0.015083000000082336,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The package made it to Perth then somehow went back to Sydney.",
+        "expected": "shipping",
+        "category": "manual_review",
+        "latency_ms": 0.018165999999819604,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "I have a shipment number but it takes me to a blank page.",
+        "expected": "shipping",
+        "category": "manual_review",
+        "latency_ms": 0.016833999999743554,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Can the courier hold my order until I arrive on Friday?",
+        "expected": "shipping",
+        "category": "shipping",
+        "latency_ms": 0.021083000000032825,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The headphones are too tight. Could I send them back?",
+        "expected": "returns",
+        "category": "manual_review",
+        "latency_ms": 0.01566699999999699,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The jacket arrived with a hole in the sleeve and I'd like another one.",
+        "expected": "returns",
+        "category": "manual_review",
+        "latency_ms": 0.01883299999994037,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "These sneakers are a size too small and I would like an exchange.",
+        "expected": "returns",
+        "category": "returns",
+        "latency_ms": 0.017750000000038568,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "I changed my mind after opening the box. How do I send it back?",
+        "expected": "returns",
+        "category": "manual_review",
+        "latency_ms": 0.017957999999929086,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Where can I print the prepaid label for sending my blender back?",
+        "expected": "returns",
+        "category": "manual_review",
+        "latency_ms": 0.016624999999770296,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The blue mug was cracked when I opened it. Can you replace it?",
+        "expected": "returns",
+        "category": "manual_review",
+        "latency_ms": 0.01754199999970396,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "I ordered two cushions and want to keep only one.",
+        "expected": "returns",
+        "category": "manual_review",
+        "latency_ms": 0.014832999999825347,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "I sent my kettle back last week and have yet to receive my refund.",
+        "expected": "returns",
+        "category": "returns",
+        "latency_ms": 0.01774999999959448,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The item was sold as new but looks used. Can I swap it?",
+        "expected": "returns",
+        "category": "manual_review",
+        "latency_ms": 0.01724999999996868,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Is an in-store return possible for an online purchase?",
+        "expected": "returns",
+        "category": "returns",
+        "latency_ms": 0.01570899999991937,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "I bought the wrong cable and would like to swap it for the correct connector.",
+        "expected": "returns",
+        "category": "manual_review",
+        "latency_ms": 0.01887499999986275,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "My gift recipient wants to exchange these gloves and has the packaging.",
+        "expected": "returns",
+        "category": "returns",
+        "latency_ms": 0.017624999999910074,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The sign in page loops back after I enter my credentials.",
+        "expected": "account_access",
+        "category": "account_access",
+        "latency_ms": 0.016625000000214385,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "My login worked yesterday but now it says the account is locked.",
+        "expected": "account_access",
+        "category": "account_access",
+        "latency_ms": 0.01729199999989106,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "I no longer have the phone that receives my sign-in code.",
+        "expected": "account_access",
+        "category": "account_access",
+        "latency_ms": 0.016292000000195372,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The password reset link says it has already expired.",
+        "expected": "account_access",
+        "category": "account_access",
+        "latency_ms": 0.014790999999902965,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The site rejects my usual credentials even though they work in the app.",
+        "expected": "account_access",
+        "category": "manual_review",
+        "latency_ms": 0.01783300000024468,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Can you help me get back into my profile after changing email providers?",
+        "expected": "account_access",
+        "category": "manual_review",
+        "latency_ms": 0.017625000000354163,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The verification email keeps going to my old inbox.",
+        "expected": "account_access",
+        "category": "account_access",
+        "latency_ms": 0.0149170000001142,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "I tried too many times and now I cannot log in.",
+        "expected": "account_access",
+        "category": "manual_review",
+        "latency_ms": 0.015374999999817618,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "My account uses an old mobile number, so I cannot complete two-factor authentication.",
+        "expected": "account_access",
+        "category": "manual_review",
+        "latency_ms": 0.018750000000178346,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Can I sign in without the authentication app on my old tablet?",
+        "expected": "account_access",
+        "category": "account_access",
+        "latency_ms": 0.01670900000005915,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Apple sign-in created a new profile and I can't open my previous one.",
+        "expected": "account_access",
+        "category": "account_access",
+        "latency_ms": 0.01858300000012747,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The page says my email is already registered but never sends a recovery message.",
+        "expected": "account_access",
+        "category": "manual_review",
+        "latency_ms": 0.01829200000003084,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Do you offer wholesale pricing for cafes?",
+        "expected": "manual_review",
+        "category": "manual_review",
+        "latency_ms": 0.01333300000005977,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Can your marketing team sponsor our school fundraiser?",
+        "expected": "manual_review",
+        "category": "manual_review",
+        "latency_ms": 0.014417000000044311,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Does this lamp come in bright orange?",
+        "expected": "manual_review",
+        "category": "manual_review",
+        "latency_ms": 0.013207999999931275,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Can I book a showroom visit on Sunday?",
+        "expected": "manual_review",
+        "category": "manual_review",
+        "latency_ms": 0.01358299999987267,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "I would like to report a typo in the product description.",
+        "expected": "manual_review",
+        "category": "manual_review",
+        "latency_ms": 0.015749999999759012,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "I need help with something about my order but cannot explain it here.",
+        "expected": "manual_review",
+        "category": "manual_review",
+        "latency_ms": 0.017458999999941938,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "The courier missed my house and I also need you to fix an unrelated charge.",
+        "expected": "manual_review",
+        "category": "manual_review",
+        "latency_ms": 0.018916999999785133,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "I need an invoice for the desk and an exchange for a separate chair. Both are urgent.",
+        "expected": "manual_review",
+        "category": "manual_review",
+        "latency_ms": 0.02012500000025952,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "I'm locked out and my package went missing. Please handle both issues today.",
+        "expected": "manual_review",
+        "category": "account_access",
+        "latency_ms": 0.018124999999979963,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "I'd like to exchange my boots and investigate an unrelated duplicate payment.",
+        "expected": "manual_review",
+        "category": "manual_review",
+        "latency_ms": 0.017624999999910074,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Please pass this compliment on to your staff.",
+        "expected": "manual_review",
+        "category": "manual_review",
+        "latency_ms": 0.013915999999891682,
+        "cost_usd": 0.0,
+        "error": ""
+      },
+      {
+        "ticket": "Everything has gone wrong. Is there a person I can speak with?",
+        "expected": "manual_review",
+        "category": "manual_review",
+        "latency_ms": 0.016667000000136767,
+        "cost_usd": 0.0,
+        "error": ""
+      }
+    ]
+  }
+}

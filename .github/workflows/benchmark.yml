@@ -1,0 +1,26 @@
+name: Benchmark
+on: workflow_dispatch
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Start Ollama and load model
+        run: |
+          docker run -d --name ollama -p 127.0.0.1:11434:11434 ollama/ollama:0.12.11
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:11434/api/tags; then break; fi
+            sleep 2
+          done
+          docker exec ollama ollama pull qwen2.5:0.5b
+          docker exec ollama ollama list
+      - run: python evaluate.py > results.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: benchmark
+          path: results.json
