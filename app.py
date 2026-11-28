@@ -32,7 +32,7 @@ async def lifespan(app):
     yield
 
 
-app = FastAPI(title="Support Ticket Triage", lifespan=lifespan)
+app = FastAPI(title="JJsauces Support Ticket Triage", lifespan=lifespan)
 
 
 @app.get("/")

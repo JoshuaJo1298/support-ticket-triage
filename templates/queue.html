@@ -2,16 +2,16 @@
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Support Ticket Triage</title>
+<title>JJsauces | Support Ticket Triage</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#f4f3ec;color:#182b26;font:16px system-ui,sans-serif}main{max-width:800px;margin:5vh auto;padding:22px}h1{font-size:clamp(2rem,7vw,3rem);letter-spacing:-.05em;margin:.3em 0}h2{font-size:1.25rem}article,.compose{background:#fff;border:1px solid #cdd7ce;border-radius:12px;padding:19px;margin-bottom:16px}textarea{display:block;width:100%;margin:10px 0;background:#fafbf9}textarea,button,select{font:inherit;border:1px solid #90a299;border-radius:6px;padding:9px;color:inherit}button{background:#21483c;color:white;cursor:pointer}select{background:white}.body{white-space:pre-wrap;overflow-wrap:anywhere}.muted{color:#456157}.notice{color:#854526}.review{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+*{box-sizing:border-box}body{margin:0;background:#f8f3ea;color:#30251f;font:16px system-ui,sans-serif}main{max-width:800px;margin:5vh auto;padding:22px}h1{font-size:clamp(2rem,7vw,3rem);letter-spacing:-.05em;margin:.3em 0}h2{font-size:1.25rem}article,.compose{background:#fff;border:1px solid #e2d3c5;border-radius:12px;padding:19px;margin-bottom:16px}textarea{display:block;width:100%;margin:10px 0;background:#fafbf9}textarea,button,select{font:inherit;border:1px solid #ab9283;border-radius:6px;padding:9px;color:inherit}button{background:#823321;color:white;cursor:pointer}select{background:white}.body{white-space:pre-wrap;overflow-wrap:anywhere}.muted{color:#655549}.notice{color:#854526}.review{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
 </style>
 <main>
-<h1>Support Ticket Triage</h1>
-<p class="muted">Review routing suggestions before assigning tickets.</p>
+<h1>JJsauces Support</h1>
+<p class="muted">Review customer enquiries about sauce orders, deliveries, returns, and accounts.</p>
 <form class="compose" action="/tickets" method="post">
 <label for="body">New ticket</label>
-<textarea id="body" name="body" rows="3" maxlength="2000" required placeholder="Describe the customer's issue"></textarea>
+<textarea id="body" name="body" rows="3" maxlength="2000" required placeholder="Example: My hot sauce gift pack shows as delivered, but I haven’t received it."></textarea>
 <button>Submit ticket</button>
 </form>
 <h2>Review queue</h2>

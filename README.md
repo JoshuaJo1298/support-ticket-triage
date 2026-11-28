@@ -1,6 +1,6 @@
-# Support Ticket Triage
+# JJsauces Support Ticket Triage
 
-A local review queue for synthetic online-store tickets. The model suggests billing, shipping, returns, account access or manual review. A reviewer assigns the final category. SQLite retains both decisions.
+A local customer support queue for JJsauces, a fictional Australian condiment shop. The model suggests billing, shipping, returns, account access or manual review. A reviewer assigns the final category. SQLite retains both decisions.
 
 ## Run the demo
 
@@ -13,9 +13,19 @@ pip install -r requirements.txt
 uvicorn app:app --port 8001
 ```
 
-Open http://localhost:8001 and submit a synthetic ticket such as “The tracking link says delivered but my porch is empty.” Choose the final category and click **Save decision**. To demonstrate an override, pick a different category and see both decisions retained. An unavailable model, timeout, or invalid response routes the ticket to manual review. The default queue uses a local SQLite file. Set `TICKET_DB` to use a separate demo file.
+Open http://localhost:8001 and try these fictional enquiries:
 
-![A reviewer assigns Shipping after an unavailable model sends the ticket to manual review.](queue-demo.png)
+| Ticket | Expected category |
+| --- | --- |
+| The tracking says my hot sauce gift pack was delivered, but it isn’t here. | Shipping |
+| I was charged twice for the smoky barbecue sauce bundle. | Billing |
+| My chilli sauce bottle arrived cracked. Can I send it back for a replacement? | Returns |
+| The password reset link for my JJsauces account has expired. | Account access |
+| Do you supply your hot sauces wholesale to cafés? | Manual review |
+
+Check the suggestion, select the final category and click **Save decision**. The queue preserves both the suggestion and the reviewer’s decision. An unavailable model, timeout, or invalid response sends the ticket to manual review. Set `TICKET_DB` to use a separate demo file.
+
+[Earlier prototype screenshot showing the manual-review fallback](queue-demo.png)
 
 ## Evaluation
 
@@ -28,7 +38,9 @@ python -m pytest -q
 
 The 60 synthetic evaluation tickets have 12 examples per label, including multi-issue and out-of-scope tickets. The prompt examples are separate. Reported macro F1 weights each of the five labels equally. The review rate measures how much work is deferred. Median latency measures each warmed routing call, and direct API fees are USD 0 for both local routers. Electricity and machine time are outside that estimate.
 
-### Results on 60 held-out tickets
+### Original benchmark on 60 held-out tickets
+
+These recorded scores are from the original generic online-store prompt. The JJsauces prompt needs a fresh evaluation before it can claim new results.
 
 | Router | Macro F1 | Routed to manual review | Median latency | Estimated API cost per ticket |
 | --- | ---: | ---: | ---: | ---: |
